@@ -13,7 +13,7 @@ const NavBar = () => {
                     <a className="navbar-brand" to="#">
                         <Link classNameName="navbar-brand mt-2 mt-lg-0" to="/">
                             <img
-                                src="images/my-photo.jpeg"
+                                src="images/my-logo.png"
                                 alt="Logo"
                                 loading="lazy"
                             />
@@ -27,22 +27,28 @@ const NavBar = () => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav m-auto">
                             <li className="nav-item active">
-                                <Link className="nav-link" to="#">Home</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/about">about</Link>
+                                <Link className="nav-link" to="/">Home</Link>
                             </li>
 
                             <li className="nav-item">
-                                <Link to="/Portfolio" className="nav-link">Portfolio</Link>
+                                <a className="nav-link" href="#about">about</a>
                             </li>
 
                             <li className="nav-item">
-                                <Link to="/resume" className="nav-link">my resume</Link>
+                                <a className="nav-link" href="#skills">skills</a>
                             </li>
+
+                            <li className="nav-item">
+                                <a className="nav-link" href="#Portfolio">Portfolio</a>
+                            </li>
+
+                            <li className="nav-item">
+                                <a className="nav-link" href="#contact">contact</a>
+                            </li>
+
                         </ul>
                         <form className="form-inline my-2 my-lg-0">
-                            <Link to="/contact"><button className="btn btn-outline-primary my-2 my-sm-0 text-light fw-bold btn-lg" type="button">Contact</button></Link>
+                            <a className='text-white animate__heartBeat  animate__animated animate__infinite' href="https://wa.me/+201210304516"><i className='fab fa-whatsapp'></i></a>
                         </form>
                     </div>
                 </Container>
