@@ -31,7 +31,7 @@ const AllProjects = () => {
 
                     <Col className='mb-4 wow fadeInUp' data-wow-delay=".1s" md="3">
                         <div class="projects">
-                            <img className='img-fluid' src="images/projects/amazon.png" alt="projects" />
+                            <img className='img-fluid' src="/images/projects/amazon.PNG" alt="projects" />
                             <div class="icons">
                                 <p>amazon</p>
                                 <a href='https://github.com/sayedosama7/amazon' target='_blank' rel="noreferrer"><i className='fab fa-github text-blue m-2'></i></a>
@@ -42,7 +42,7 @@ const AllProjects = () => {
 
                     <Col className='mb-4 wow fadeInUp' data-wow-delay=".1s" md="3">
                         <div class="projects">
-                            <img className='img-fluid' src="images/projects/brownies.png" alt="projects" />
+                            <img className='img-fluid' src="/images/projects/brownies.PNG" alt="projects" />
                             <div class="icons">
                                 <p>brownies dessert shop</p>
                                 <a href='https://github.com/sayedosama7/brownies-react' target='_blank' rel="noreferrer"><i className='fab fa-github text-blue m-2'></i></a>

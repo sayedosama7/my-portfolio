@@ -13,7 +13,7 @@ const NavBar = () => {
                     <a className="navbar-brand" to="#">
                         <Link classNameName="navbar-brand mt-2 mt-lg-0" to="/">
                             <img
-                                src="images/my-logo.png"
+                                src="/images/my-Logo.png"
                                 alt="Logo"
                                 loading="lazy"
                             />
