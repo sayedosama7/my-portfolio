@@ -2,9 +2,7 @@ import * as React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App"
 import { createBrowserRouter, RouterProvider} from "react-router-dom";
-import About from "./Components/About";
-import Portfolio from "./Components/Portfolio";
-import Contact from "./Components/Contact";
+import AllProjects from "./Components/AllProjects";
 
 const router = createBrowserRouter([
   {
@@ -12,17 +10,10 @@ const router = createBrowserRouter([
     element: <App/>,
   },
   {
-    path: "about",
-    element: <About/>,
+    path: "allprojects",
+    element: <AllProjects/>,
   },
-  {
-    path: "portfolio",
-    element: <Portfolio/>,
-  },
-  {
-    path: "contact",
-    element: <Contact/>,
-  },
+
 ]);
 
 createRoot(document.getElementById("root")).render(

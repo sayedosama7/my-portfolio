@@ -5,28 +5,32 @@ import { TypeAnimation } from 'react-type-animation';
 const Header = () => {
     return (
         <div>
-            <Container className='header'>
+            <Container className='header pt-5'>
                 <Row>
-                    <Col className='header-caption' md="12" lg="6">
-                        <h4 className='text-blue  m-0 p-0'>hi, i'm sayed osama</h4>
-                        <p className='text-blue m-0 p-0'>i'm</p>
-                        <TypeAnimation
-                            sequence={[
-                                'front end developer',
-                                1000,
-                                ' react developer',
-                                1000
-                            ]}
-                            speed={50}
-                            className='text-animation'
-                            repeat={Infinity}
-                        />
-                        <button className='btn btn-primary btn-block w-25 p-3'>Download CV</button>
-                    </Col>
 
-                    <Col md="12" lg="6">
+                    <Col className='header-caption' data-wow-delay=".1s" md="12" lg="6">
+                        <h4 className='text-blue wow fadeInLeft m-0 p-0' data-wow-delay=".3s">hello, i'm sayed osama</h4>
+                        <p className='text-blue wow fadeInLeft m-0 p-0' data-wow-delay=".5s">i'm</p>
 
-                        <div className='position-realative'>
+                        <div className='wow fadeInLeft' data-wow-delay=".7s">
+                            <TypeAnimation
+                                sequence={[
+                                    'front end developer',
+                                    1000,
+                                    ' react developer',
+                                    1000
+                                ]}
+                                speed={50}
+                                className='text-animation'
+                                repeat={Infinity}
+                            />
+                        </div>
+                        
+                        <a href="/sayed osama resume.pdf" className='btn btn-primary d-block p-3 mt-5 wow fadeInUp w-50' data-wow-delay="1.5s" download="sayed osama resume.pdf">Download CV <i className="fa-solid fa-download"></i></a>
+                        </Col>
+
+                        <Col md="12" lg="6">
+                        <div className='position-realative wow fadeInDown' data-wow-delay=".4s">
                             <img className='m-auto d-block' src='images/my-photo.jpeg' alt='my-img' />
                         </div>
                         <div className='header-icons'>
