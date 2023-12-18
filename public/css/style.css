@@ -33,7 +33,6 @@ html {
 
 body {
     background-color: var(--bg-color);
-    height: 5000px;
 }
 
 :root {
@@ -85,7 +84,16 @@ body {
     font-size: 40px;
     margin-left: 20px;
 }
-
+@media (max-width:992px) {
+    .navbar-nav {
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar form{
+        display: flex;
+        justify-content: center;
+    }
+}
 /* End navbar  */
 
 /* start header  */
@@ -129,7 +137,7 @@ body {
     }
 
     .header-caption {
-        padding: 0 !important;
+        padding-top: 20% !important;
     }
 
 }
@@ -547,7 +555,7 @@ textarea.form-control {
 }
 
 textarea.form-control {
-    padding: 20px 20px 70px !important;
+    padding: 30px 30px 70px !important;
 }
 
 .contact form input:focus {
@@ -569,3 +577,45 @@ textarea.form-control {
 }
 
 /* End contact  */
+.logo {
+    padding-bottom: 50px;
+}
+
+.logo img {
+    width: 150px;
+}
+
+/* End logo  */
+
+/* start footer  */
+.footer .icons {
+    font-size: 40px;
+}
+
+.footer .icons .fa-facebook,
+.fa-linkedin,
+.whats,
+.fa-envelope,
+.fa-github {
+    border-radius: 10px;
+    border: 4px solid rgba(132, 132, 132, 0.831);
+    transition: all .5s ease;
+    color: white;
+}
+
+.footer .icons .fa-facebook:hover,
+.fa-linkedin:hover,
+.whats:hover,
+.fa-envelope:hover,
+.fa-github:hover {
+    transform: scale(.8);
+    background-color: var(--main-color);
+    border-radius: 50%;
+    box-shadow: 0 0 20px #9244f0;
+    cursor: pointer;
+}
+
+/* End footer  */
+
+
+
