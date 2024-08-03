@@ -52,8 +52,42 @@ body {
 }
 
 .btn-primary:hover {
-    transform: scale(1.1);
 }
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1b0d35;
+    color: #fff !important;
+}
+.navbar-dark .navbar-nav .nav-link.active {
+    position: relative !important;
+  }
+  
+  .navbar-dark .navbar-nav .nav-link.active::after {
+    position: absolute;
+    content: '';
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+  }
+  
+  @media (max-width:576px) {
+    .scroll-to-top {
+      bottom: 20px !important;
+      right: 20px !important;
+    }
+  
+    .navbar-nav .nav-item .nav-link.active::after {
+      bottom: 7px;
+      background-color: #fff;
+    }
+  }
+  
 
 /* End global  */
 
@@ -84,16 +118,85 @@ body {
     font-size: 40px;
     margin-left: 20px;
 }
+
+.navbar button {
+    border: none;
+}
+
+.nav2 {
+    width: 100%;
+    height: 5em;
+    display: flex;
+    justify-content: flex-start;
+    padding: 16px 5px;
+    display: none;
+    background-color: var(--bg-color);
+}
+
+.burger-menu {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.burger-bar {
+    width: 50px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 0.5em;
+}
+
+/* ------------- sliding menu ------------------ */
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: inherit;
+}
+
+/* ----- animations--------- */
+/* clicked */
+.burger-bar.clicked:nth-child(1) {
+    transform: rotate(45deg) translate(0.75em, 1.25em);
+    transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(2) {
+    transform: scale(0.1);
+    transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(3) {
+    transform: rotate(135deg) translate(-0.5em, 1em);
+    transition: ease-out 0.5s;
+}
+
+/* unclicked */
+.burger-bar.unclicked {
+    transform: rotate(0) translate(0);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
+
 @media (max-width:992px) {
     .navbar-nav {
         justify-content: center;
         align-items: center;
     }
-    .navbar form{
+
+    .navbar form {
         display: flex;
         justify-content: center;
     }
+
+    .nav2 {
+        display: block;
+    }
 }
+
 /* End navbar  */
 
 /* start header  */
@@ -257,6 +360,79 @@ body {
     animation-timing-function: ease-in-out;
 }
 
+@media(min-width:1400px) and (max-width:3000px)  {
+    .header .html img {
+        right: 100px;
+    }
+
+    .header .css img {
+        left: 100px;
+    }
+
+    .header .tailwind img {
+        left: 50px;
+    }
+
+    .header .bootstrap img {
+        left: 100px;
+    }
+
+    .header .react img {
+        right: 100px;
+    }
+
+    .header .git img {
+        right: 50px;
+    }
+
+    .header .js img {
+        left: 290px;
+        top: -90px;
+    }
+
+    .header .github img {
+        left: 295px;
+        bottom: -90px;
+    }
+
+}
+@media(max-width:1300px)  {
+    .header .html img {
+        right: 50px;
+    }
+
+    .header .css img {
+        left: 60px;
+    }
+
+    .header .tailwind img {
+        left: 0px;
+    }
+
+    .header .bootstrap img {
+        left: 60px;
+    }
+
+    .header .react img {
+        right: 40px;
+    }
+
+    .header .git img {
+        right: 0px;
+    }
+
+    .header .js img {
+        left: 280px;
+        top: -100px;
+    }
+
+    .header .github img {
+        left: 285px;
+        bottom: -100px;
+    }
+
+}
+
 @media(min-width:992px) and (max-width:1200px) {
     .header .html img {
         right: 50px;
@@ -292,8 +468,8 @@ body {
 
 }
 
-@media(max-width:992px) {
-    .header button {
+@media(max-width:991px) {
+    .header a {
         margin-bottom: 100px !important;
     }
 
@@ -487,8 +663,8 @@ body {
 
 .Portfolio .projects {
     position: relative;
-    padding: 10px;
-    background-color: #ccc;
+    padding: 8px;
+    background-color: #cccccca4;
     border-radius: 10px;
 }
 
@@ -542,7 +718,7 @@ body {
 
 /* start contact  */
 .contact {
-    padding: 100px;
+    padding: 100px 100px 20px 100px;
 }
 
 .contact form input,
@@ -578,7 +754,7 @@ textarea.form-control {
 
 /* End contact  */
 .logo {
-    padding-bottom: 50px;
+    padding: 50px;
 }
 
 .logo img {
@@ -617,5 +793,105 @@ textarea.form-control {
 
 /* End footer  */
 
+/* start Notification  */
+.alertBox {
+    position: absolute;
+    bottom: 5%;
+    right: 1%;
+    z-index: 9999;
+    background-color: #28144d;
+    width: 400px;
+    height: 100px;
+    border-left: 2px solid #fff;
+    -webkit-animation: fadein 0.5s; 
+    animation: fadein 0.5s;
+}
+
+.alertClose {
+    color: #ffffff85;
+    float: right;
+    font-size: 20px;
+    margin: 2px 15px;
+    cursor: pointer;
+}
+
+.alertClose:hover {
+    color: #fff;
+}
+
+.notification-sign {
+    color: #fff;
+    font-size: 25px;
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+}
 
 
+.alertBox h1 {
+    color: #fff;
+    margin: 5px 10px;
+    text-align: left;
+    font-size: 17px;
+}
+
+.alertBox p {
+    text-align: center;
+    font-size: 19px;
+    color: #fff;
+    margin: 15px 30px;
+}
+
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {
+        right: 0;
+        opacity: 0;
+    }
+
+    to {
+        right: 1%;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        right: 0;
+        opacity: 0;
+    }
+
+    to {
+        right: 1%;
+        opacity: 1;
+    }
+}
+
+@media (max-width:576px) {
+    .alertBox {
+        width: 180px;
+        height: 60px;
+        right: 2%;
+    }
+
+    .alertBox h1 {
+        display: none;
+    }
+
+    .alertBox p {
+        font-size: 12px;
+        margin: 12px 50px; 
+    }
+    .notification-sign {
+        font-size: 20px; 
+    }
+}
+
+/* End Notification  */
+
+/* start certificate  */
+.certificate {
+
+}
+/* End certificate  */

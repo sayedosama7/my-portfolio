@@ -22,39 +22,7 @@ const Skills = () => {
                         <img className='wow bounceInUp' data-wow-delay=".6s"  src='/images/header-icons/material-ui.png' alt='' />
                     </Col>
                     <div className='d-flex justify-content-center mt-5'>
-
-
                     </div>
-
-                    {/* <Col className='text-light' md="6">
-                        <div class="skills">
-                            <div class="skill">
-                                <h3>html<span>95%</span></h3>
-                                <div class="progress">
-                                    <span style={{width:"95%"}}></span>
-                                </div>
-                            </div>
-                            <div class="skill">
-                                <h3>css<span>90%</span></h3>
-                                <div class="progress">
-                                    <span style={{width:"90%"}}></span>
-                                </div>
-                            </div>
-                            <div class="skill">
-                                <h3>javascript<span>80%</span></h3>
-                                <div class="progress">
-                                    <span style={{width:"80%"}}></span>
-                                </div>
-                            </div>
-                            <div class="skill">
-                                <h3>react<span>80%</span></h3>
-                                <div class="progress">
-                                    <span style={{width:"85%"}}></span>
-                                </div>
-                            </div>
-                        </div>
-                    </Col> */}
-
                 </Row>
             </Container>
         </div>
