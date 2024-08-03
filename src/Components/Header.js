@@ -25,11 +25,11 @@ const Header = () => {
                                 repeat={Infinity}
                             />
                         </div>
-                        
-                        <a href="/sayed osama resume.pdf" className='btn btn-primary d-block p-3 mt-5 wow fadeInUp w-50' data-wow-delay="1.5s" download="sayed osama resume.pdf">Download CV <i className="fa-solid fa-download"></i></a>
-                        </Col>
 
-                        <Col md="12" lg="6">
+                        <a href="Sayed Osama Mohamed Resume.pdf" className='btn btn-primary p-3 mt-5 wow fadeInUp' data-wow-delay="1.5s" download="Sayed Osama Mohamed Resume.pdf">Download CV <i className="fa-solid fa-download"></i></a>
+                    </Col>
+
+                    <Col md="12" lg="6">
                         <div className='position-realative wow fadeInDown' data-wow-delay=".4s">
                             <img className='m-auto d-block' src='images/my-photo.jpeg' alt='my-img' />
                         </div>
